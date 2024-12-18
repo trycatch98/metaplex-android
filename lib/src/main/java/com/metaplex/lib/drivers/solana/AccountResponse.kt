@@ -19,7 +19,7 @@ import kotlinx.serialization.builtins.nullable
 
 @Serializable
 data class AccountInfo<D>(val data: D?, val executable: Boolean,
-                          val lamports: Long, val owner: String?, val rentEpoch: Long)
+                          val lamports: Long, val owner: String?, val rentEpoch: ULong)
 
 @Serializable
 data class AccountInfoWithPublicKey<P>(val account: AccountInfo<P>, @SerialName("pubkey") val publicKey: String)
